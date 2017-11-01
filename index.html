@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>HIGHTCHARTS DEMO</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script>
+	function show_chart(){
+		var option = {};
+		var title = {text:"气温图"};
+		var xAxis = {title:{text:"月"},categrories:[1,2,3,4,5,6,7,8,9,10,11,12],gridLineWidth:1};
+		var yAxis = {title:{text:"摄氏度"}};
+		var series = [{name:"s1",data:[-3,3,6,14,12,18,21,28,25,20,13,7]}];
+		option.title = title;
+		option.xAxis = xAxis;
+		option.yAxis = yAxis;
+		option.series = series;
+		$("#chart_content").highcharts(option);
+	}
+</script>
+<body>
+	<div id="chart_content" onclick="show_chart();">
+	点我显示图片哦<_>
+	</div>
+</body>
+</html>
